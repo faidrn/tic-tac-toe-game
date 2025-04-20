@@ -1,19 +1,9 @@
-import { useState } from "react";
-
-
-function Square(){
-    const [value, setValue] = useState(null); /* value=> almacena el valor, setValue=> es una función que puede ser usada para cambiar el valor  */
-        /* El valor null pasado a useState es usado como valor inicial para esta variable de estado */
-
-
-    function handleClick(){
-        setValue('X'); /* Se imprimira X cuando se haga click sobre el tablero */
-    }
+function Square({ value, onSquareClick }){
 
     return (
         <button 
             className="square"
-            onClick={handleClick}
+            onClick={onSquareClick}
         >
             {value}
         </button>
