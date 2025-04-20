@@ -4,11 +4,24 @@ import { Square } from "./Square/Square";
 
 export default function Board() {
   const [squares, setSquares] = useState(Array(9).fill(null)); /* crea un arreglo de 9 elementos y establece cada elemento a null */
+  const [xIsNext, setXIsNext] = useState(true);
 
   function handleClick(i){
+    if (squares[i]){
+      // Si el cuadrado esta lleno, nos salimos de la función y no sobreescribimos en el cuadrado
+      return;
+    }
+
     const nextSquares = squares.slice();
-    nextSquares[i] = "X";
+
+    if (xIsNext){
+      nextSquares[i] = "X";
+    } else{
+      nextSquares[i] = "O";
+    }
+    
     setSquares(nextSquares);
+    setXIsNext(!xIsNext);
   }
 
 
