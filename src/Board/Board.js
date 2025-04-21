@@ -22,9 +22,18 @@ function Board({ xIsNext, squares, onPlay }) {
   
   
     const  {winner, winningSquares } = calculateWinner(squares);
-    const status = winner 
-      ?  `Winner: ${winner}` 
-      : `Next player: ${xIsNext ? 'X' : 'O'}`;
+    
+    // mensaje de empate
+    const isDraw = !winner && squares.every(Square => Square !== null);
+
+    let status;
+    if (winner) {
+      status = `Winner: ${winner}`;
+    } else if (isDraw) {
+      status = 'Is a draw! No one wins';
+    } else {
+      status = `Next Player: ${xIsNext ? 'X' : 'O'}`;
+    }
   
     
 
