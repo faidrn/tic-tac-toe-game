@@ -88,3 +88,8 @@ body {
 .game-info {
   margin-left: 20px;
 }
+
+.winner-square {
+  background-color: #aaffaa; /* Verde claro para resaltar */
+  box-shadow: 0 0 8px rgba(0, 255, 0, 0.5);
+}

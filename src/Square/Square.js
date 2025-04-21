@@ -1,8 +1,8 @@
-function Square({ value, onSquareClick }){
+function Square({ value, isWinner, onSquareClick }){
 
     return (
         <button 
-            className="square"
+            className={`square ${isWinner ? 'winner-square' : ''}`}
             onClick={onSquareClick}
         >
             {value}
@@ -11,6 +11,3 @@ function Square({ value, onSquareClick }){
   }
 
   export { Square };
-
-  /* React provee una función llamada useState q se puede llamar desde el 
-    componente para dejarle recordar cosas  */
