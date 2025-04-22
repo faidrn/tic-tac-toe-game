@@ -20,19 +20,24 @@ Before getting started, make sure you have installed:
 ## :package: How to Run the Project Locally
 
 1. Clone the repository:
-`git clone https://github.com/faidrn/tic-tac-toe-game.git`
+
+    `git clone https://github.com/faidrn/tic-tac-toe-game.git`
 
 2. Navigate to the project directory:
-`cd tic-tac-toe-game`
+
+    `cd tic-tac-toe-game`
 
 3. Install dependencies:
-`npm install`
+
+    `npm install`
 
 4. Start the application:
-`npm start`
+
+    `npm start`
 
 5. Open your browser and visit:
-`http://localhost:3000`
+
+    `http://localhost:3000`
 
 ## :dna: Project Structure
 
